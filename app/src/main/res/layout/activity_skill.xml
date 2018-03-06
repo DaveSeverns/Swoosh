@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.sevdev.swoosh.SkillActivity">
+    tools:context="com.sevdev.swoosh.Controller.SkillActivity">
 
     <ImageView
         android:id="@+id/imageView5"
@@ -59,23 +59,26 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ToggleButton
-            android:id="@+id/toggleButton3"
+            android:id="@+id/beginnerSkillButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="16dp"
             android:layout_weight="1"
             android:background="@drawable/swoosh_toggle"
+            android:onClick="onBeginnerClick"
             android:text="@string/beginner"
             android:textColor="@color/colorAccent"
             android:textOff="@string/beginner"
-            android:textOn="@string/beginner"/>
+            android:textOn="@string/beginner" />
 
         <ToggleButton
+            android:id="@+id/ballerSkillButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
             android:layout_weight="1"
             android:background="@drawable/swoosh_toggle"
+            android:onClick="onBallerClick"
             android:text="@string/baller"
             android:textColor="@color/colorAccent"
             android:textOff="@string/baller"
@@ -84,7 +87,7 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/skillFinishButton"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
@@ -92,6 +95,7 @@
         android:layout_marginStart="16dp"
         android:background="@drawable/swoosh_button"
         android:fontFamily="@font/montserrat"
+        android:onClick="onFinishClicked"
         android:text="@string/finish"
         android:textColor="@color/colorAccent"
         app:layout_constraintBottom_toBottomOf="parent"
